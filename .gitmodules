@@ -1,0 +1,3 @@
+[submodule "deps/osx/ORSSerialPort"]
+	path = deps/osx/ORSSerialPort
+	url = git@github.com:armadsen/ORSSerialPort.git
