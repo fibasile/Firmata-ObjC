@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4927C9618224EE900C1A82D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4927C9518224EE900C1A82D /* Cocoa.framework */; };
+		F4927CA018224EE900C1A82D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4927C9E18224EE900C1A82D /* InfoPlist.strings */; };
+		F4927CA218224EE900C1A82D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CA118224EE900C1A82D /* main.m */; };
+		F4927CA618224EE900C1A82D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4927CA418224EE900C1A82D /* Credits.rtf */; };
+		F4927CA918224EE900C1A82D /* ADAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CA818224EE900C1A82D /* ADAppDelegate.m */; };
+		F4927CAC18224EE900C1A82D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4927CAA18224EE900C1A82D /* MainMenu.xib */; };
+		F4927CAE18224EE900C1A82D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4927CAD18224EE900C1A82D /* Images.xcassets */; };
+		F4927CB518224EE900C1A82D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4927CB418224EE900C1A82D /* XCTest.framework */; };
+		F4927CB618224EE900C1A82D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4927C9518224EE900C1A82D /* Cocoa.framework */; };
+		F4927CBE18224EEA00C1A82D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4927CBC18224EEA00C1A82D /* InfoPlist.strings */; };
+		F4927CC018224EEA00C1A82D /* FirmataTestMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CBF18224EEA00C1A82D /* FirmataTestMacTests.m */; };
+		F4927CDA18224F1400C1A82D /* ADArduino.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CCB18224F1400C1A82D /* ADArduino.m */; };
+		F4927CDB18224F1400C1A82D /* ADArduinoPin.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CCD18224F1400C1A82D /* ADArduinoPin.m */; };
+		F4927CDC18224F1400C1A82D /* ADCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = F4927CCE18224F1400C1A82D /* ADCircularBuffer.c */; };
+		F4927CDD18224F1400C1A82D /* ADFirmata.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CD118224F1400C1A82D /* ADFirmata.m */; };
+		F4927CDE18224F1400C1A82D /* ADSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CD418224F1400C1A82D /* ADSerialPort.m */; };
+		F4927CDF18224F1400C1A82D /* ADUnixSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CD718224F1400C1A82D /* ADUnixSerialPort.m */; };
+		F4927CE018224F1400C1A82D /* ADUnixSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CD918224F1400C1A82D /* ADUnixSerialPort.m */; };
+		F4927CE618224F3100C1A82D /* ORSSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CE318224F3100C1A82D /* ORSSerialPort.m */; };
+		F4927CE718224F3100C1A82D /* ORSSerialPortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CE518224F3100C1A82D /* ORSSerialPortManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4927CB718224EE900C1A82D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4927C8A18224EE900C1A82D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4927C9118224EE900C1A82D;
+			remoteInfo = FirmataTestMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4927C9218224EE900C1A82D /* FirmataTestMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirmataTestMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4927C9518224EE900C1A82D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F4927C9818224EE900C1A82D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F4927C9918224EE900C1A82D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F4927C9A18224EE900C1A82D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F4927C9D18224EE900C1A82D /* FirmataTestMac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FirmataTestMac-Info.plist"; sourceTree = "<group>"; };
+		F4927C9F18224EE900C1A82D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4927CA118224EE900C1A82D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4927CA318224EE900C1A82D /* FirmataTestMac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirmataTestMac-Prefix.pch"; sourceTree = "<group>"; };
+		F4927CA518224EE900C1A82D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F4927CA718224EE900C1A82D /* ADAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADAppDelegate.h; sourceTree = "<group>"; };
+		F4927CA818224EE900C1A82D /* ADAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADAppDelegate.m; sourceTree = "<group>"; };
+		F4927CAB18224EE900C1A82D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F4927CAD18224EE900C1A82D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F4927CB318224EE900C1A82D /* FirmataTestMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirmataTestMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4927CB418224EE900C1A82D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F4927CBB18224EE900C1A82D /* FirmataTestMacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FirmataTestMacTests-Info.plist"; sourceTree = "<group>"; };
+		F4927CBD18224EEA00C1A82D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4927CBF18224EEA00C1A82D /* FirmataTestMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirmataTestMacTests.m; sourceTree = "<group>"; };
+		F4927CCA18224F1400C1A82D /* ADArduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADArduino.h; path = ../../../Library/ADArduino.h; sourceTree = "<group>"; };
+		F4927CCB18224F1400C1A82D /* ADArduino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADArduino.m; path = ../../../Library/ADArduino.m; sourceTree = "<group>"; };
+		F4927CCC18224F1400C1A82D /* ADArduinoPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADArduinoPin.h; path = ../../../Library/ADArduinoPin.h; sourceTree = "<group>"; };
+		F4927CCD18224F1400C1A82D /* ADArduinoPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADArduinoPin.m; path = ../../../Library/ADArduinoPin.m; sourceTree = "<group>"; };
+		F4927CCE18224F1400C1A82D /* ADCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ADCircularBuffer.c; path = ../../../Library/ADCircularBuffer.c; sourceTree = "<group>"; };
+		F4927CCF18224F1400C1A82D /* ADCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADCircularBuffer.h; path = ../../../Library/ADCircularBuffer.h; sourceTree = "<group>"; };
+		F4927CD018224F1400C1A82D /* ADFirmata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADFirmata.h; path = ../../../Library/ADFirmata.h; sourceTree = "<group>"; };
+		F4927CD118224F1400C1A82D /* ADFirmata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADFirmata.m; path = ../../../Library/ADFirmata.m; sourceTree = "<group>"; };
+		F4927CD218224F1400C1A82D /* ADFirmataConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADFirmataConst.h; path = ../../../Library/ADFirmataConst.h; sourceTree = "<group>"; };
+		F4927CD318224F1400C1A82D /* ADSerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSerialPort.h; path = ../../../Library/ADSerialPort.h; sourceTree = "<group>"; };
+		F4927CD418224F1400C1A82D /* ADSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSerialPort.m; path = ../../../Library/ADSerialPort.m; sourceTree = "<group>"; };
+		F4927CD618224F1400C1A82D /* ADUnixSerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADUnixSerialPort.h; sourceTree = "<group>"; };
+		F4927CD718224F1400C1A82D /* ADUnixSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADUnixSerialPort.m; sourceTree = "<group>"; };
+		F4927CD818224F1400C1A82D /* ADUnixSerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUnixSerialPort.h; path = ../../../Library/osx/ADUnixSerialPort.h; sourceTree = "<group>"; };
+		F4927CD918224F1400C1A82D /* ADUnixSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADUnixSerialPort.m; path = ../../../Library/osx/ADUnixSerialPort.m; sourceTree = "<group>"; };
+		F4927CE218224F3100C1A82D /* ORSSerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORSSerialPort.h; path = ../../../deps/osx/ORSSerialPort/Source/ORSSerialPort.h; sourceTree = "<group>"; };
+		F4927CE318224F3100C1A82D /* ORSSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORSSerialPort.m; path = ../../../deps/osx/ORSSerialPort/Source/ORSSerialPort.m; sourceTree = "<group>"; };
+		F4927CE418224F3100C1A82D /* ORSSerialPortManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORSSerialPortManager.h; path = ../../../deps/osx/ORSSerialPort/Source/ORSSerialPortManager.h; sourceTree = "<group>"; };
+		F4927CE518224F3100C1A82D /* ORSSerialPortManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORSSerialPortManager.m; path = ../../../deps/osx/ORSSerialPort/Source/ORSSerialPortManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4927C8F18224EE900C1A82D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4927C9618224EE900C1A82D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4927CB018224EE900C1A82D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4927CB618224EE900C1A82D /* Cocoa.framework in Frameworks */,
+				F4927CB518224EE900C1A82D /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4927C8918224EE900C1A82D = {
+			isa = PBXGroup;
+			children = (
+				F4927C9B18224EE900C1A82D /* FirmataTestMac */,
+				F4927CB918224EE900C1A82D /* FirmataTestMacTests */,
+				F4927C9418224EE900C1A82D /* Frameworks */,
+				F4927C9318224EE900C1A82D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4927C9318224EE900C1A82D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4927C9218224EE900C1A82D /* FirmataTestMac.app */,
+				F4927CB318224EE900C1A82D /* FirmataTestMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4927C9418224EE900C1A82D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4927C9518224EE900C1A82D /* Cocoa.framework */,
+				F4927CB418224EE900C1A82D /* XCTest.framework */,
+				F4927C9718224EE900C1A82D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4927C9718224EE900C1A82D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4927C9818224EE900C1A82D /* AppKit.framework */,
+				F4927C9918224EE900C1A82D /* CoreData.framework */,
+				F4927C9A18224EE900C1A82D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F4927C9B18224EE900C1A82D /* FirmataTestMac */ = {
+			isa = PBXGroup;
+			children = (
+				F4927CE118224F1C00C1A82D /* Deps */,
+				F4927CC918224EFD00C1A82D /* Library */,
+				F4927CA718224EE900C1A82D /* ADAppDelegate.h */,
+				F4927CA818224EE900C1A82D /* ADAppDelegate.m */,
+				F4927CAA18224EE900C1A82D /* MainMenu.xib */,
+				F4927CAD18224EE900C1A82D /* Images.xcassets */,
+				F4927C9C18224EE900C1A82D /* Supporting Files */,
+			);
+			path = FirmataTestMac;
+			sourceTree = "<group>";
+		};
+		F4927C9C18224EE900C1A82D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4927C9D18224EE900C1A82D /* FirmataTestMac-Info.plist */,
+				F4927C9E18224EE900C1A82D /* InfoPlist.strings */,
+				F4927CA118224EE900C1A82D /* main.m */,
+				F4927CA318224EE900C1A82D /* FirmataTestMac-Prefix.pch */,
+				F4927CA418224EE900C1A82D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4927CB918224EE900C1A82D /* FirmataTestMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4927CBF18224EEA00C1A82D /* FirmataTestMacTests.m */,
+				F4927CBA18224EE900C1A82D /* Supporting Files */,
+			);
+			path = FirmataTestMacTests;
+			sourceTree = "<group>";
+		};
+		F4927CBA18224EE900C1A82D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4927CBB18224EE900C1A82D /* FirmataTestMacTests-Info.plist */,
+				F4927CBC18224EEA00C1A82D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4927CC918224EFD00C1A82D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				F4927CCA18224F1400C1A82D /* ADArduino.h */,
+				F4927CCB18224F1400C1A82D /* ADArduino.m */,
+				F4927CCC18224F1400C1A82D /* ADArduinoPin.h */,
+				F4927CCD18224F1400C1A82D /* ADArduinoPin.m */,
+				F4927CCE18224F1400C1A82D /* ADCircularBuffer.c */,
+				F4927CCF18224F1400C1A82D /* ADCircularBuffer.h */,
+				F4927CD018224F1400C1A82D /* ADFirmata.h */,
+				F4927CD118224F1400C1A82D /* ADFirmata.m */,
+				F4927CD218224F1400C1A82D /* ADFirmataConst.h */,
+				F4927CD318224F1400C1A82D /* ADSerialPort.h */,
+				F4927CD418224F1400C1A82D /* ADSerialPort.m */,
+				F4927CD518224F1400C1A82D /* osx */,
+				F4927CD818224F1400C1A82D /* ADUnixSerialPort.h */,
+				F4927CD918224F1400C1A82D /* ADUnixSerialPort.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		F4927CD518224F1400C1A82D /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				F4927CD618224F1400C1A82D /* ADUnixSerialPort.h */,
+				F4927CD718224F1400C1A82D /* ADUnixSerialPort.m */,
+			);
+			name = osx;
+			path = ../../../Library/osx;
+			sourceTree = "<group>";
+		};
+		F4927CE118224F1C00C1A82D /* Deps */ = {
+			isa = PBXGroup;
+			children = (
+				F4927CE218224F3100C1A82D /* ORSSerialPort.h */,
+				F4927CE318224F3100C1A82D /* ORSSerialPort.m */,
+				F4927CE418224F3100C1A82D /* ORSSerialPortManager.h */,
+				F4927CE518224F3100C1A82D /* ORSSerialPortManager.m */,
+			);
+			name = Deps;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4927C9118224EE900C1A82D /* FirmataTestMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4927CC318224EEA00C1A82D /* Build configuration list for PBXNativeTarget "FirmataTestMac" */;
+			buildPhases = (
+				F4927C8E18224EE900C1A82D /* Sources */,
+				F4927C8F18224EE900C1A82D /* Frameworks */,
+				F4927C9018224EE900C1A82D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FirmataTestMac;
+			productName = FirmataTestMac;
+			productReference = F4927C9218224EE900C1A82D /* FirmataTestMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4927CB218224EE900C1A82D /* FirmataTestMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4927CC618224EEA00C1A82D /* Build configuration list for PBXNativeTarget "FirmataTestMacTests" */;
+			buildPhases = (
+				F4927CAF18224EE900C1A82D /* Sources */,
+				F4927CB018224EE900C1A82D /* Frameworks */,
+				F4927CB118224EE900C1A82D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4927CB818224EE900C1A82D /* PBXTargetDependency */,
+			);
+			name = FirmataTestMacTests;
+			productName = FirmataTestMacTests;
+			productReference = F4927CB318224EE900C1A82D /* FirmataTestMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4927C8A18224EE900C1A82D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AD;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Fiore Basile";
+				TargetAttributes = {
+					F4927CB218224EE900C1A82D = {
+						TestTargetID = F4927C9118224EE900C1A82D;
+					};
+				};
+			};
+			buildConfigurationList = F4927C8D18224EE900C1A82D /* Build configuration list for PBXProject "FirmataTestMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4927C8918224EE900C1A82D;
+			productRefGroup = F4927C9318224EE900C1A82D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4927C9118224EE900C1A82D /* FirmataTestMac */,
+				F4927CB218224EE900C1A82D /* FirmataTestMacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4927C9018224EE900C1A82D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4927CA018224EE900C1A82D /* InfoPlist.strings in Resources */,
+				F4927CAE18224EE900C1A82D /* Images.xcassets in Resources */,
+				F4927CA618224EE900C1A82D /* Credits.rtf in Resources */,
+				F4927CAC18224EE900C1A82D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4927CB118224EE900C1A82D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4927CBE18224EEA00C1A82D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4927C8E18224EE900C1A82D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4927CE018224F1400C1A82D /* ADUnixSerialPort.m in Sources */,
+				F4927CE618224F3100C1A82D /* ORSSerialPort.m in Sources */,
+				F4927CA218224EE900C1A82D /* main.m in Sources */,
+				F4927CDD18224F1400C1A82D /* ADFirmata.m in Sources */,
+				F4927CA918224EE900C1A82D /* ADAppDelegate.m in Sources */,
+				F4927CE718224F3100C1A82D /* ORSSerialPortManager.m in Sources */,
+				F4927CDF18224F1400C1A82D /* ADUnixSerialPort.m in Sources */,
+				F4927CDC18224F1400C1A82D /* ADCircularBuffer.c in Sources */,
+				F4927CDA18224F1400C1A82D /* ADArduino.m in Sources */,
+				F4927CDE18224F1400C1A82D /* ADSerialPort.m in Sources */,
+				F4927CDB18224F1400C1A82D /* ADArduinoPin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4927CAF18224EE900C1A82D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4927CC018224EEA00C1A82D /* FirmataTestMacTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4927CB818224EE900C1A82D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4927C9118224EE900C1A82D /* FirmataTestMac */;
+			targetProxy = F4927CB718224EE900C1A82D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4927C9E18224EE900C1A82D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4927C9F18224EE900C1A82D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F4927CA418224EE900C1A82D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4927CA518224EE900C1A82D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		F4927CAA18224EE900C1A82D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4927CAB18224EE900C1A82D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		F4927CBC18224EEA00C1A82D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4927CBD18224EEA00C1A82D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4927CC118224EEA00C1A82D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F4927CC218224EEA00C1A82D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F4927CC418224EEA00C1A82D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FirmataTestMac/FirmataTestMac-Prefix.pch";
+				INFOPLIST_FILE = "FirmataTestMac/FirmataTestMac-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F4927CC518224EEA00C1A82D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FirmataTestMac/FirmataTestMac-Prefix.pch";
+				INFOPLIST_FILE = "FirmataTestMac/FirmataTestMac-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F4927CC718224EEA00C1A82D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FirmataTestMac.app/Contents/MacOS/FirmataTestMac";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FirmataTestMac/FirmataTestMac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FirmataTestMacTests/FirmataTestMacTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F4927CC818224EEA00C1A82D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FirmataTestMac.app/Contents/MacOS/FirmataTestMac";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FirmataTestMac/FirmataTestMac-Prefix.pch";
+				INFOPLIST_FILE = "FirmataTestMacTests/FirmataTestMacTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4927C8D18224EE900C1A82D /* Build configuration list for PBXProject "FirmataTestMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4927CC118224EEA00C1A82D /* Debug */,
+				F4927CC218224EEA00C1A82D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4927CC318224EEA00C1A82D /* Build configuration list for PBXNativeTarget "FirmataTestMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4927CC418224EEA00C1A82D /* Debug */,
+				F4927CC518224EEA00C1A82D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F4927CC618224EEA00C1A82D /* Build configuration list for PBXNativeTarget "FirmataTestMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4927CC718224EEA00C1A82D /* Debug */,
+				F4927CC818224EEA00C1A82D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4927C8A18224EE900C1A82D /* Project object */;
+}
