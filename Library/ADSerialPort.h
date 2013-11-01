@@ -14,6 +14,8 @@
 - (void) write:(NSData*)byteData;
 - (UInt8) read;
 - (BOOL)available;
+- (int)rxCount;
+- (int)txCount;
 @end
 
 

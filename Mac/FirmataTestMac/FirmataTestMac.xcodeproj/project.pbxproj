@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F439CA2818229D12002F09E2 /* ADDetailWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F439CA2618229D12002F09E2 /* ADDetailWindowController.m */; };
+		F439CA2B1822A01B002F09E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F439CA2A1822A01B002F09E2 /* IOKit.framework */; };
 		F4927C9618224EE900C1A82D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4927C9518224EE900C1A82D /* Cocoa.framework */; };
 		F4927CA018224EE900C1A82D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4927C9E18224EE900C1A82D /* InfoPlist.strings */; };
 		F4927CA218224EE900C1A82D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CA118224EE900C1A82D /* main.m */; };
@@ -24,7 +26,6 @@
 		F4927CDD18224F1400C1A82D /* ADFirmata.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CD118224F1400C1A82D /* ADFirmata.m */; };
 		F4927CDE18224F1400C1A82D /* ADSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CD418224F1400C1A82D /* ADSerialPort.m */; };
 		F4927CDF18224F1400C1A82D /* ADUnixSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CD718224F1400C1A82D /* ADUnixSerialPort.m */; };
-		F4927CE018224F1400C1A82D /* ADUnixSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CD918224F1400C1A82D /* ADUnixSerialPort.m */; };
 		F4927CE618224F3100C1A82D /* ORSSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CE318224F3100C1A82D /* ORSSerialPort.m */; };
 		F4927CE718224F3100C1A82D /* ORSSerialPortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4927CE518224F3100C1A82D /* ORSSerialPortManager.m */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F439CA2518229D12002F09E2 /* ADDetailWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDetailWindowController.h; sourceTree = "<group>"; };
+		F439CA2618229D12002F09E2 /* ADDetailWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDetailWindowController.m; sourceTree = "<group>"; };
+		F439CA2A1822A01B002F09E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		F4927C9218224EE900C1A82D /* FirmataTestMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirmataTestMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4927C9518224EE900C1A82D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F4927C9818224EE900C1A82D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -72,8 +76,6 @@
 		F4927CD418224F1400C1A82D /* ADSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADSerialPort.m; path = ../../../Library/ADSerialPort.m; sourceTree = "<group>"; };
 		F4927CD618224F1400C1A82D /* ADUnixSerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADUnixSerialPort.h; sourceTree = "<group>"; };
 		F4927CD718224F1400C1A82D /* ADUnixSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADUnixSerialPort.m; sourceTree = "<group>"; };
-		F4927CD818224F1400C1A82D /* ADUnixSerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADUnixSerialPort.h; path = ../../../Library/osx/ADUnixSerialPort.h; sourceTree = "<group>"; };
-		F4927CD918224F1400C1A82D /* ADUnixSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADUnixSerialPort.m; path = ../../../Library/osx/ADUnixSerialPort.m; sourceTree = "<group>"; };
 		F4927CE218224F3100C1A82D /* ORSSerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORSSerialPort.h; path = ../../../deps/osx/ORSSerialPort/Source/ORSSerialPort.h; sourceTree = "<group>"; };
 		F4927CE318224F3100C1A82D /* ORSSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORSSerialPort.m; path = ../../../deps/osx/ORSSerialPort/Source/ORSSerialPort.m; sourceTree = "<group>"; };
 		F4927CE418224F3100C1A82D /* ORSSerialPortManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORSSerialPortManager.h; path = ../../../deps/osx/ORSSerialPort/Source/ORSSerialPortManager.h; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F439CA2B1822A01B002F09E2 /* IOKit.framework in Frameworks */,
 				F4927C9618224EE900C1A82D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +126,7 @@
 		F4927C9418224EE900C1A82D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F439CA2A1822A01B002F09E2 /* IOKit.framework */,
 				F4927C9518224EE900C1A82D /* Cocoa.framework */,
 				F4927CB418224EE900C1A82D /* XCTest.framework */,
 				F4927C9718224EE900C1A82D /* Other Frameworks */,
@@ -147,6 +151,8 @@
 				F4927CC918224EFD00C1A82D /* Library */,
 				F4927CA718224EE900C1A82D /* ADAppDelegate.h */,
 				F4927CA818224EE900C1A82D /* ADAppDelegate.m */,
+				F439CA2518229D12002F09E2 /* ADDetailWindowController.h */,
+				F439CA2618229D12002F09E2 /* ADDetailWindowController.m */,
 				F4927CAA18224EE900C1A82D /* MainMenu.xib */,
 				F4927CAD18224EE900C1A82D /* Images.xcassets */,
 				F4927C9C18224EE900C1A82D /* Supporting Files */,
@@ -199,8 +205,6 @@
 				F4927CD318224F1400C1A82D /* ADSerialPort.h */,
 				F4927CD418224F1400C1A82D /* ADSerialPort.m */,
 				F4927CD518224F1400C1A82D /* osx */,
-				F4927CD818224F1400C1A82D /* ADUnixSerialPort.h */,
-				F4927CD918224F1400C1A82D /* ADUnixSerialPort.m */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -325,11 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4927CE018224F1400C1A82D /* ADUnixSerialPort.m in Sources */,
 				F4927CE618224F3100C1A82D /* ORSSerialPort.m in Sources */,
 				F4927CA218224EE900C1A82D /* main.m in Sources */,
 				F4927CDD18224F1400C1A82D /* ADFirmata.m in Sources */,
 				F4927CA918224EE900C1A82D /* ADAppDelegate.m in Sources */,
+				F439CA2818229D12002F09E2 /* ADDetailWindowController.m in Sources */,
 				F4927CE718224F3100C1A82D /* ORSSerialPortManager.m in Sources */,
 				F4927CDF18224F1400C1A82D /* ADUnixSerialPort.m in Sources */,
 				F4927CDC18224F1400C1A82D /* ADCircularBuffer.c in Sources */,
@@ -546,6 +550,7 @@
 				F4927CC518224EEA00C1A82D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4927CC618224EEA00C1A82D /* Build configuration list for PBXNativeTarget "FirmataTestMacTests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +559,7 @@
 				F4927CC818224EEA00C1A82D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

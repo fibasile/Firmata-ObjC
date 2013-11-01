@@ -22,6 +22,8 @@
 @property (nonatomic,strong) NSString* device;
 @property (nonatomic,assign) int baudRate;
 @property (nonatomic,assign) NSTimeInterval timeout;
+@property (nonatomic,assign) int rxCount;
+@property (nonatomic,assign) int txCount;
 
 
 /*

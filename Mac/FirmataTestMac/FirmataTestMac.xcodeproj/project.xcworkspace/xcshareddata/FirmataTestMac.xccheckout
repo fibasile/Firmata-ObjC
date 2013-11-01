@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C7BF3D96-A540-44DA-9B54-35ADBAE10BA7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FirmataTestMac</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>36A87BAE-D3C4-4FE9-9C78-6A1C47453B3F</key>
+		<string>ssh://github.com/fibasile/Firmata-ObjC.git</string>
+		<key>50E59421-89EC-4268-A361-5E53D654A0C4</key>
+		<string>ssh://github.com/armadsen/ORSSerialPort.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Mac/FirmataTestMac/FirmataTestMac.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>36A87BAE-D3C4-4FE9-9C78-6A1C47453B3F</key>
+		<string>../../../..</string>
+		<key>50E59421-89EC-4268-A361-5E53D654A0C4</key>
+		<string>../../../../deps/osx/ORSSerialPort</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/fibasile/Firmata-ObjC.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>36A87BAE-D3C4-4FE9-9C78-6A1C47453B3F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>36A87BAE-D3C4-4FE9-9C78-6A1C47453B3F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Firmata-ObjC</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>50E59421-89EC-4268-A361-5E53D654A0C4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ORSSerialPort</string>
+		</dict>
+	</array>
+</dict>
+</plist>

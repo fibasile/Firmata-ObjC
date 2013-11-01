@@ -124,22 +124,27 @@
             [self.receivedBuffer appendBytes:&byte length:1];
 
             if (self.executeMultiByteCommand != 0 && self.waitForData == 0) {
-                UInt8 params[2];
+                uint8_t params[2];
                 [self.receivedBuffer getBytes:&params length:2];
 //                NSLog(@"%02x",self.executeMultiByteCommand);
+                int analogVal=0;
                 switch(self.executeMultiByteCommand) {
                     case DIGITAL_MESSAGE:
-                        [self updateDigitalPortValue:self.multiByteChannel mask:(params[0] << 7) | params[1] ];
+//                        NSLog(@"Digital message");
+                        [self updateDigitalPortValue:self.multiByteChannel mask:params[0] | (params[1] << 7)   ];
                         break;
                     case ANALOG_MESSAGE:
-                        [self updateAnalogPinValue:self.multiByteChannel mask:(params[0] << 7) | params[1]];
+                        analogVal=params[0] | (params[1] << 7);
+                        [self updateAnalogPinValue:self.multiByteChannel mask:analogVal];
                         break;
                     case REPORT_FIRMWARE:
                         
                         self.firmataVersion = [NSString stringWithFormat:@"%d.%d", params[0], params[1]];
                         break;
                     case PROTOCOL_VERSION:
+#ifdef DEBUG_FIRMATA
                         NSLog(@"Protocol version %d.%d", params[0], params[1]);
+#endif
                         break;
                 
                 }
@@ -160,6 +165,7 @@
                 case PROTOCOL_VERSION:
                     self.waitForData = 2;
                     self.executeMultiByteCommand = command;
+                    self.receivedBuffer = [NSMutableData data];
                     break;
                 case START_SYSEX:
                     self.parsingSysEx = YES;
@@ -167,7 +173,9 @@
                     self.receivedBuffer = [NSMutableData data];
                     break;
                 default:
+#ifdef DEBUG_FIRMATA
                     NSLog(@"Unkown command %02x", command);
+#endif
                     break;
             }
         }
@@ -272,8 +280,9 @@
  * 6  END_SYSEX (0xF7)
  */
 - (void) parseSysexReportFirmware {
+#ifdef DEBUG_FIRMATA
     NSLog(@"parseSysexReportFirmware");
-    
+#endif
     if (self.receivedBuffer.length >= 3){
         UInt8 params[3];
         [self.receivedBuffer getBytes:&params length:3];
@@ -335,8 +344,9 @@
     if (self.hasCapabilities)
         return;
     self.hasCapabilities = YES;
+#ifdef DEBUG_FIRMATA
     NSLog(@"Capabilities %@", self.receivedBuffer);
-
+#endif
     UInt8* receivedBytes;
     unsigned long receivedLength =self.receivedBuffer.length;
     receivedBytes = malloc(sizeof(UInt8)*receivedLength);
@@ -400,7 +410,9 @@
  * N  END_SYSEX (0xF7)
  */
 - (void) parseSysexAnalogMappingResponse {
+#ifdef DEBUG_FIRMATA
     NSLog(@"Analog mapping received");
+#endif
     if (self.hasAnalogMapping) return;
     self.hasAnalogMapping = YES;
     
@@ -414,7 +426,9 @@
     int pin=0;
     for (int i=1; i<receivedLength; i++) {
         pin_info[pin].analog_channel = (uint8_t) receivedBytes[i];
+#ifdef DEBUG_FIRMATA
         NSLog(@"Received %d -> %d",  receivedBytes[i], pin);
+#endif
         pin++;
     }
     
@@ -453,8 +467,9 @@
 - (void) parseSysexPinStateResponse {
     
 
-    
+#ifdef DEBUG_FIRMATA
     NSLog(@"Pin state received");
+#endif
     UInt8* receivedBytes;
     unsigned long receivedLength =self.receivedBuffer.length;
     receivedBytes = malloc(sizeof(UInt8)*receivedLength);
@@ -476,8 +491,9 @@
     } else {
         [self.digitalPins addObject:arduino_pin];
     }
+#ifdef DEBUG_FIRMATA
     NSLog(@"Adding pin %@", arduino_pin);
-
+#endif
     
     
     free(receivedBytes);
@@ -517,59 +533,85 @@
     [self.serialPort write:data];
 }
 
--(void)changeValue:(ADArduinoPin *)pin value:(uint32_t)newValue {
-    
-    if ([pin isAnalogPin]){
-        // update the pin
-        
-        if ( pin.analog_channel <= 15 && newValue<= 16383 ) {
-            UInt8 pkt[3] = { ANALOG_MESSAGE | pin.number,  newValue & 0x7F, (newValue >> 7) & 0x7F};
-            NSData* data = [NSData dataWithBytes:&pkt length:3];
-            [self.serialPort write:data];
-            
-        } else {
-            /* use sysex
-             
-             As an alternative to the normal analog message, this extended version allows addressing beyond pin 15,
-             and supports sending analog values with any number of bits. The number of data bits is inferred by the length of the message.
-             
-             * extended analog
-             * -------------------------------
-             * 0  START_SYSEX (0xF0) (MIDI System Exclusive)
-             * 1  extended analog message (0x6F)
-             * 2  pin (0 to 127)
-             * 3  bits 0-6 (least significant byte)
-             * 4  bits 7-13
-             * ... additional bytes may be sent if more bits needed
-             * N  END_SYSEX (0xF7) (MIDI End of SysEx - EOX)
-             */
-            
-            NSLog(@"Extended analog is not supported  yet");
-        }
-        
-        
 
-    } else {
-        // update the port
-        
-        int port_num = pin.number / 8;
-        UInt8 port_val = 0;
-        for (int i=0; i<8; i++) {
-            int p = port_num * 8 + i;
-            if (p < self.digitalPins.count) {
-                ADArduinoPin* digitalPin = [self.digitalPins objectAtIndex:p];
-                if (digitalPin.mode == MODE_OUTPUT || digitalPin.mode == MODE_INPUT) {
-                    if (digitalPin.value) {
-                        port_val |= (1<<i);
-                    }
+
+-(void)writeDigitalValue:(ADArduinoPin *)pin value:(uint32_t)newValue {
+    
+    int port_num = pin.number / 8;
+    UInt8 port_val = 0;
+    for (int i=0; i<8; i++) {
+        int p = port_num * 8 + i;
+        if (p < self.digitalPins.count) {
+            ADArduinoPin* digitalPin = [self.digitalPins objectAtIndex:p];
+            if (digitalPin.mode == MODE_OUTPUT || digitalPin.mode == MODE_INPUT) {
+                if (digitalPin.value) {
+                    port_val |= (1<<i);
                 }
             }
         }
-        UInt8 pkt[3] = { DIGITAL_MESSAGE | port_num, port_val & 0x7F, (port_val >> 7) & 0x7F };
-        NSData* data = [NSData dataWithBytes:&pkt length:3];
-//        NSLog(@"Sending %@", data);
-        [self.serialPort write:data];
+    }
+    UInt8 pkt[3] = { DIGITAL_MESSAGE | port_num, port_val & 0x7F, (port_val >> 7) & 0x7F };
+    NSData* data = [NSData dataWithBytes:&pkt length:3];
+    //        NSLog(@"Sending %@", data);
+    [self.serialPort write:data];
+    
 
+}
+
+-(void)writeAnalogValue:(ADArduinoPin*)pin value:(uint32_t)newValue {
+    
+    if ( pin.number <= 15 && newValue<= 16383 ) {
+#ifdef DEBUG_FIRMATA
+        NSLog(@"Sending analog message");
+#endif
+        UInt8 pkt[3] = { ANALOG_MESSAGE | pin.number,  newValue & 0x7F, (newValue >> 7) & 0x7F};
+        NSData* data = [NSData dataWithBytes:&pkt length:3];
+        [self.serialPort write:data];
+    } else {
+        /* use sysex
+         
+         As an alternative to the normal analog message, this extended version allows addressing beyond pin 15,
+         and supports sending analog values with any number of bits. The number of data bits is inferred by the length of the message.
+         
+         * extended analog
+         * -------------------------------
+         * 0  START_SYSEX (0xF0) (MIDI System Exclusive)
+         * 1  extended analog message (0x6F)
+         * 2  pin (0 to 127)
+         * 3  bits 0-6 (least significant byte)
+         * 4  bits 7-13
+         * ... additional bytes may be sent if more bits needed
+         * N  END_SYSEX (0xF7) (MIDI End of SysEx - EOX)
+         */
+        uint8_t buf[12];
+		int len=4;
+		buf[0] = START_SYSEX;
+		buf[1] = 0x6F;
+		buf[2] = pin.number;
+		buf[3] = newValue & 0x7F;
+        if (newValue > 0x00000080) buf[len++] = (newValue >> 7) & 0x7F;
+		if (newValue > 0x00004000) buf[len++] = (newValue >> 14) & 0x7F;
+		if (newValue > 0x00200000) buf[len++] = (newValue >> 21) & 0x7F;
+		if (newValue > 0x10000000) buf[len++] = (newValue >> 28) & 0x7F;
+		buf[len++] = END_SYSEX;
+        NSData* data = [NSData dataWithBytes:&buf length:len];
+        [self.serialPort write:data];
+    }
+
+}
+
+
+
+-(void)changeValue:(ADArduinoPin *)pin value:(uint32_t)newValue {
+    
+    if ([[pin currentMode] isEqualToString:@"Output"]){
+        // update the pin
+
+        [self writeDigitalValue:pin value:newValue];
+        
+    } else {
+        // update the port
+        [self writeAnalogValue:pin value:newValue];
         
     
     }
@@ -578,7 +620,9 @@
 
 
 - (void) updateDigitalPortValue:(UInt8)portNumber mask:(UInt8) port_val {
+#ifdef DEBUG_FIRMATA
     NSLog(@"update %d", portNumber);
+#endif
     int pinNo = portNumber * 8;
     for (int mask=1; mask & 0xFF; mask <<= 1, pinNo++) {
         if (pinNo >= self.digitalPins.count ) return;
@@ -594,13 +638,19 @@
 
 }
 
-- (void) updateAnalogPinValue:(UInt8)pinNumber mask:(float) value {
+- (void) updateAnalogPinValue:(UInt8)pinNumber mask:(int) value {
     
     if (pinNumber >= self.analogPins.count ) return;
-    ADArduinoPin* pin = [self.analogPins objectAtIndex:pinNumber];
-    if (pin) {
-        [pin updateValue:value];
-//        NSLog(@"pin %@", pin);
+    for (ADArduinoPin* p in self.analogPins) {
+        if (p.analog_channel == pinNumber) {
+            ADArduinoPin* pin = p; // [self.analogPins objectAtIndex:pinNumber];
+            if (pin) {
+                [pin updateValue:value];
+#ifdef DEBUG_FIRMATA
+                NSLog(@"pin A%d %u",pin.analog_channel, value);
+#endif
+            }
+        }
     }
 }
 

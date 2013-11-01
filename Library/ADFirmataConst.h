@@ -14,6 +14,9 @@
 #define DEFAULT_BAUDRATE 57600
 #define DEFAULT_TIMEOUT 2
 
+// Enable this define for debug output
+
+//#define DEBUG_FIRMATA
 
 
 // Message command bytes - straight outta Pd_firmware.pde

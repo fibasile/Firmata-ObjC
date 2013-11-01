@@ -28,7 +28,7 @@ typedef struct {
     int mode;
     int analog_channel;
     int supported_modes;
-    int value;
+    uint32_t value;
 } pin_t;
 
 

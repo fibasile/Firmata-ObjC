@@ -31,7 +31,8 @@
         self.internalSerial.baudRate = [NSNumber numberWithInt:aBaudRate];
         [self.internalSerial open];
         ADCircularBufferInit(&buffer, MAX_BUFFER_SIZE);
-    
+        self.rxCount = 0;
+        self.txCount = 0;
     }
     return self;
     
@@ -43,12 +44,10 @@
     
     uint8_t* buffData = (uint8_t*) data.bytes;
     unsigned long len = data.length;
+    self.rxCount += len;
      ElemType elem = {0};
     for (int i=0;i<len;i++){
-        if (ADCircularBufferIsFull(&buffer)){
-            NSLog(@"Buffer full, lost data");
-            return;
-        }
+
         elem.value = (uint8_t)buffData[i];
         ADCircularBufferWrite(&buffer, &elem);
     }
@@ -61,6 +60,7 @@
 }
 
 -(void)write:(NSData *)byteData {
+    self.txCount += byteData.length;
     [self.internalSerial sendData:byteData];
 }
 
